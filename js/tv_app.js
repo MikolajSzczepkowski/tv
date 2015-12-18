@@ -6,7 +6,7 @@ $(function (){
 		thisContainerHover;
 	$(".stream-container").on("mouseenter", function(){
 		parentWidth = $(this).width(),
-		parentHeight = $(this).height(),
+		parentHeight = ($(this).height()+1),
 		thisStreamContainer = $(this);
 		$(this).prepend("<div class='stream-container-hover'></div>");
 		$(".stream-container-hover").css({"width":parentWidth, "height": parentHeight});

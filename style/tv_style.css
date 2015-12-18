@@ -21,8 +21,6 @@
 	max-width: 100%
 }
 .stream-container-hover{
-	width: 347px;
-	height:231px;
 	position: absolute;
     background: rgba(250, 250, 250, 0.9);
 }

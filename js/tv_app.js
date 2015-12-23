@@ -7,12 +7,6 @@ $(function (){
 		streamContainerHeight = $("#streamContainer").height(),
 		comment = $(".comments-container li");
 
-	$(".main-right ul").css("height", streamContainerHeight);
-	$(window).resize(function(){
-		streamContainerHeight = $("#streamContainer").height();
-		$(".main-right ul").css("height", streamContainerHeight);
-	});
-
 	for (var i = comment.length - 1; i >= 0; i--) {
 		thisComment = $(comment[i]);
 		commentHeight = thisComment.height();

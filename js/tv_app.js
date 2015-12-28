@@ -1,20 +1,33 @@
 $(function (){
 	var parentWidth,
 		parentHeight,
-		offset,
+		pageWidth = $(document).width(),
 		thisStreamContainer,
 		thisContainerHover,
+		offset,
 		streamContainerHeight = $("#streamContainer").height(),
-		comment = $(".comments-container li");
+		comment = $(".comments-container li"),
+		listWidth;
 
 	for (var i = comment.length - 1; i >= 0; i--) {
 		thisComment = $(comment[i]);
 		commentHeight = thisComment.height();
-		if ( commentHeight > 30) {
+		if ( commentHeight > 30 && pageWidth > 620) {
 			thisComment.find("a").css("height", commentHeight);
 			thisComment.find("span").css("height", commentHeight);
 		};
 	};
+
+	if (pageWidth < 990) {
+		listWidth = $(".main-right ul li").width();
+		$(".main-right .container-title").css("width", listWidth);
+	};
+	$(window).resize(function(){
+		if (pageWidth < 990) {
+			listWidth = $(".main-right ul li").width();
+			$(".main-right .container-title").css("width", listWidth);
+		}
+	});
 
 	$("li .stream-container-inner").on("mouseenter", function(){
 		parentWidth = $(this).width(),

@@ -35,9 +35,7 @@ $(function (){
 		thisStreamContainer = $(this);
 		$(this).prepend("<div class='stream-container-hover'></div>");
 		$(".stream-container-hover").css({"width":parentWidth, "height": parentHeight});
-		if ($(this).parents().hasClass("favorite-streams")) {
-			$(".stream-container-hover").append("<span><img src='images/love-red.png' alt='like'>273</span>");
-		}
+		$(".stream-container-hover").append("<span><img src='images/love-red.png' alt='like'>273</span>");
 		$(".stream-container-hover").append("<button class='text-uppercase'>watch</button>");
 		thisContainerHover = $(this).find(".stream-container-hover");
 		offset = thisStreamContainer.offset();
@@ -55,5 +53,8 @@ $(function (){
 			top: offset.top,
 			left: offset.left
 		});
+	});
+	$(".bottom-info button").on("click", function(){
+		$(this).find("img").attr("src", "images/love-red.png");
 	});
 });

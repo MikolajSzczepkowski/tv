@@ -129,13 +129,14 @@
 .main-right ul li{
 	width: 100%;
 }
-.stream-request-outer{
-	margin: 15px 0 0 0;
-	padding: 15px 0 0 0;
-	border-top: 1px solid #d8d8d8;
+.bottom-line{
+	margin: 0 0 15px 0;
+	padding: 0 0 15px 0;
+	border-bottom: 1px solid #d8d8d8;
 }
 .stream-request{
 	height: 200px;
+	margin-bottom: 50px;
 	line-height: 200px;
 	white-space: nowrap;
 	background: #363636;

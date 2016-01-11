@@ -39,6 +39,7 @@
 	height: 232px;
 	position: absolute;
 	background: rgba(250, 250, 250, 0.9);
+	cursor: pointer;
 }
 .stream-container-hover span{
 	padding: 5px 10px;

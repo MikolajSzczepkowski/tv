@@ -117,7 +117,7 @@
 .favorite-streams ul{
 	height: 524px;
 }
-.main-right ul::-webkit-scrollbar, .favorite-streams ul::-webkit-scrollbar,	.comments-tainer ul::-webkit-scrollbar{
+.main-right ul::-webkit-scrollbar, .favorite-streams ul::-webkit-scrollbar,	.comments-container ul::-webkit-scrollbar{
 	width: 7px;
 }
 .main-right ul::-webkit-scrollbar-track, .favorite-streams ul::-webkit-scrollbar-track, .comments-container ul::-webkit-scrollbar-track{

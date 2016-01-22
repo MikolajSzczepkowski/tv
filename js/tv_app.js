@@ -58,4 +58,14 @@ $(function (){
 	$(".bottom-info button").on("click", function(){
 		$(this).find("img").attr("src", "images/love-red.png");
 	});
+	$(document).on("click", ".bottom-info button", function(){
+		if (!$(this).hasClass("liked")) {
+			$(this).find("img").attr("src", "images/love-red.png");
+			$(this).addClass("liked");
+		}
+		else{
+			$(this).find("img").attr("src", "images/love.png");
+			$(this).removeClass("liked");
+		}
+	});
 });

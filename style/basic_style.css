@@ -1,6 +1,7 @@
 body{
 	font-family: 'Open Sans', sans-serif;
 	background: url(./../images/background.png) repeat;
+	padding-right: 0!important;
 }
 .margin-left{
 	margin-left: 15px;
@@ -9,18 +10,26 @@ body{
 	background: #fff;
 	border-bottom: 5px solid #e43f3f;
 }
+.nav-wrapper ul{
+	list-style: none;
+	padding: 0;
+	margin: 0 0 0 15px;
+}
 .nav-wrapper div img{
 	margin: 10px 0;
 }
 .menu-size{
 	height: 50px;
 }
-#user{
+#user div div{
 	display: inline-block;
+}
+#user>ul{
+	margin: 0;
 }
 .user-avatar img{
 	width: 35px;
-	border: 2px solid #e43f3f;
+	border: 2px solid #1182f5;
 }
 .menu-background{
 	padding: 0;
@@ -29,18 +38,129 @@ body{
 	border-bottom: 3px solid #E43F3F;
 	background: #d8d8d8;
 }
+#menuBackground.menu-background{
+	max-width: 100%;
+	background: #F5F5F5;
+}
+#menuBackground.menu-box{
+	background: #EFEFEF;
+}
+#menuPlaystationSlider{
+	margin-bottom: 30px;
+}
+.menu-scroll h3{
+	width: 164px;
+	height: 30px;
+	margin-bottom: 3px;
+	padding: 7px 0 0 0;
+	font-size: 14px;
+	font-weight: bold;
+	vertical-align: middle;
+	color: #fff;
+}
+.menu-scroll ul{
+	margin: 0 0 10px 0;
+}
+.menu-scroll ul li div img{
+	margin: 0;
+}
+.menu-scroll ul li div span{
+	right: 0;
+	position: absolute;
+}
+#menuXboxSlider.menu-scroll h3{
+	background: #27912b;
+}
+#menuPlaystationSlider.menu-scroll h3{
+	background: #1182f5;
+}
+.tournament-container{
+	margin-bottom: 30px;
+	opacity: 0;
+}
+.tournament-container.visable{
+	opacity: 1;
+}
+.tournament-container .tournament-title{
+	margin: 0 0 15px 0;
+}
+.tournament-container h2, .tournament-container span{
+	height: 30px;
+	padding: 7px 0 0 0;
+	display: inline-block;
+	background: #363636;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+}
+.tournament-container h2{
+	width: 164px;
+	margin: 0 0 15px 0;
+}
+.tournament-container span{
+	width: 80px;
+	padding: 5px 0 0 0;
+}
+.tournament-container span.red-background{
+	background: #e43f3f;
+}
+.tournament-container span[data-name="play"]{
+	opacity: 0;
+}
+.xs-pull-right{
+	width: 100%;
+	float: left;
+}
+.tournament-container ul{
+	margin: 0;
+}
+.tournament-container ul li{
+	height: 30px;
+	margin: 0 0 60px 0;
+}
+.tournament-container ul li a{
+	text-decoration: none;
+	color: #333;
+}
+.tournament-container ul li .tournament-icons{
+	width: 68px;
+	height: 32px;
+	display: inline-block;
+}
+.tournament-container ul li img{
+	margin: 0;
+}
+.tournament-container ul li p{
+	display: inline-block;
+	font-size: 12px;
+	font-style: italic;
+}
+.tournament-container ul li:hover p{
+	color: #e43f3f;
+}
+.tournament-container ul li div p{
+	margin: 0 15px 5px 0;
+}
 .menu-box{
+	top: 55px;
 	list-style: none;
 	margin-top: 5px;
 	box-shadow: none;
 	border-radius: 0;
 	padding: 0;
 	background: #d8d8d8;
+	border: 0;
 	border-bottom: 3px solid #e43f3f;
 }
 .menu-box li{
 	margin-bottom: 3px;
 	background: #fff;
+}
+.menu-box>.teams-menu{
+	height: 0;
+}
+.menu-box>.teams-menu>a{
+	display: none;
 }
 .menu-box li:last-child{
 	margin-bottom: 0;
@@ -52,53 +172,235 @@ body{
 	max-width: 100%;
 	margin: 0;
 }
-#target .menu-box{
+.menu-background .menu-box{
+	top: 0;
 	margin: 0; 
 	display: inline-block;
-	border: 1px solid rgba(0,0,0,.15);
-	border-bottom: none;
-	border-top: none; 
 }
-#target #firstMenuBox{
-	margin-bottom: 10px;
-	border-bottom: 3px solid #e43f3f;
+.menu-info-box{
+	margin: 10px 0 0 -15px;
+	padding: 0 4px;
+	position: absolute;
+	background: #000;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 10px;
 }
-#target .menu-box li{
-	width: 350px;
-	height: 90px;
-}
-#target .menu-box li:first-child{
-	height: 63px;
-	background: #fff;
-}
-#target .menu-box li:first-child:hover{
-	background: #fff;
-	color: #333;
-}
-#target .menu-box li:first-child h6{
-	height: 63px;
-	width: 250px;
-	padding: 20px 90px 0 30px;
-	margin: 0;
-	font-size: 14px;
-}
-#target .menu-box li:hover {
+#chat .menu-info-box{
+	margin-left: 0;
 	background: #e43f3f; 
 }
-#target .menu-box li:hover a{
+.dropdown-submenu {
+	position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+	width: 200px;
+	max-height: 340px;
+	top: 67px;
+	left: 0;
+	margin-left: 0;
+	overflow-y: auto;
+	display: block;
+}
+.dropdown-submenu>.dropdown-menu li a{
+	height: 64px;
+	padding: 0 26px 0 0;
+}
+.dropdown-submenu>.dropdown-menu li div{
+	width: 64px;
+	height: 64px;
+	margin: 0;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+.dropdown-submenu>.dropdown-menu li div img{
+	top: 50%;
+	left: 50%;
+	margin: -20px 0 0 -17px;
+	position: absolute;
+	border: 3px solid #363636;
+}
+.dropdown-submenu>.dropdown-menu li:first-of-type div img{
+	border: none;
+    width: 64px;
+    top: 25%;
+    left: 30%;
+}
+.background-cover{
+	width: 100%;
+	height: 100%;
+	padding:0;
+	margin:0;
+	top:0;
+	left:0;
+	position:absolute;
+	z-index: 1500;
+	display: none;
+}
+.modal-open{
+	overflow-y: auto;
+	padding-right: 0!important;
+}
+.alert-box-wrapper{
+	width: 100%;
+	position: fixed;
+	z-index: 2000;
+	display: none;
+}
+.alert-box{
+	width: 300px;
+	margin: 0 auto;
+	padding: 10px;
+	position: relative;
+	background: #e43f3f;
+	border-radius: 50px;
 	color: #fff;
 }
-#target .menu-box li a{
-	padding: 0;
+.alert-box img, .alert-box p{
 	display: inline-block;
-	text-decoration: none;
+}
+.alert-box p{
+	width: 240px;
+	margin: 0;
+	padding: 0 10px;
+	float: right;
+}
+.coins-payment{
+	top: 100px;
+	background:rgba(0, 0, 0, 0.8);
+	border-top: 5px solid #e43f3f;
+	border-bottom: 3px solid #e43f3f;
+	color: #fff;
+}
+.coins-payment-text{
+	height: 150px;
+	margin-top: 30px;
+	padding: 10px;
+	background: #e43f3f;
+	text-align: left;
+}
+.coins-list{
+	padding: 0;
+}
+.coins-list ul{
+	padding: 0;
+}
+.coins-list ul li{
+	width: 30%;
+	padding-left: 1%;
+	display: inline-block;
+	float: left;
+	cursor: pointer;
+}
+.coins-list ul li:nth-of-type(1), .coins-list ul li:nth-of-type(4){
+	padding-left: 0;
+}
+.coins-list ul li p{
+	height: 32px;
+	margin: 0 0 5px 0;
+	padding: 0;
+	background: #e43f3f;
+	border: 1px solid #e43f3f;
+	font-weight: bold;
+	text-align: center;
+}
+.coins-list ul li p:nth-of-type(even){
+	padding-top: 5px;
+	background: #1182f5;
+	border: 1px solid #1182f5;
+}
+.coins-list ul li:hover p, .coins-list ul li.active p{
+	background: #363636;
+	border: 1px solid #fff;
+}
+.coins-list ul li p img{
+	margin: 0;
+}
+.coins-payment button{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: none;
+	border: none;
+}
+#errorContainer{
+	z-index: 2000;
+}
+.error-wrapper{
+	top: 35%;
+	background: #fff;
 	color: #333;
 }
-#target .menu-box li a img{
-	padding-right: 20px;
+.error-wrapper>div{
+	padding: 0 0 0 15px;
+}
+.error-wrapper p{
+	margin-top: 45px;
+	margin-bottom: 0;
+	font-style: italic;
+}
+.error-wrapper button{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background: #e43f3f;
+	color: #fff;
+	font-weight: bold;
+}
+.error-wrapper button:hover{
+	background: #363636;
+}
+.have-alert span{
+	background: #e43f3f;
+}
+#alert .menu-box{
+	width: 280px;
+	max-height: 500px;
+	margin: 0;
+	padding: 0 10px 20px 10px;
+	background: #fff;
+	overflow-y: auto;
+}
+#alert .menu-box h6{
+	padding: 0 0 5px 0;
+	font-style: italic;
+	border-bottom: 1px solid #d8d8d8;
+}
+#alert .menu-box ul{
+	max-height: 172px;
+	overflow-y: auto; 
+}
+#alert .menu-box ul li{
+	margin: 0 0 5px 0;
+	padding: 15px 10px 10px 10px;
+	background: #e43f3f;
+	border-radius: 40px;
+	cursor: pointer;
+}
+#alert .menu-box ul li:hover{
+	background: #363636;
+}
+#alert .menu-box ul li:hover img{
+	opacity: 1;
+}
+#alert .menu-box ul li p{
+	width: 170px;
+	display: inline-block;
+	color: #fff;
+	font-style: italic;
+}
+#alert .menu-box ul li img{
+	max-width: 100%;
+	margin: 0;
+	float: right;
+	display: inline-block;
+	vertical-align: top;
+	opacity: 0.5;
 }
 .pointer{
 	cursor: pointer;
+}
+.login-wrapper, .register-wrapper{
+	top: 100px;
 }
 .login{
 	height: 200px;
@@ -113,14 +415,159 @@ body{
 	font-weight: bold;
 	line-height: 2;
 }
+.login-text:hover{
+	background: #1182f5;
+	color: #fff;
+}
+.covering-box h2{
+	height: 50px;
+	margin: 0;
+	padding-top: 18px;
+	background: #fff;
+	color: #333;
+	font-weight: bold;
+	font-size: 14px;
+}
+.covering-box h2 span{
+	margin-left: 5px;
+	font-style: italic;
+	font-weight: normal;
+}
+.covering-box>div{
+	margin-top: 5px;
+	background: #fff;
+	border-top: 5px solid #1182f5;
+	border-bottom: 3px solid #1182f5;
+}
+.covering-box form{
+	border-bottom: 1px solid #d8d8d8;
+}
+.covering-box form>div{
+	margin: 20px 0;
+}
+.covering-box form div img{
+	width: 50px;
+	display: inline-block;
+	float: left;
+	background: #1182f5;
+	vertical-align: top;
+}
+.covering-box form input{
+	width: 85.9%;
+	height: 50px;
+	padding-left: 10px;
+	display: inline-block;
+	float: left;
+	background: #363636;
+	color: #fff;
+	border: none;
+}
+.covering-box form input[type="checkbox"] {
+	display:none;
+}
+.covering-box form input[type="checkbox"] + label span {
+	width:15px;
+	height:15px;
+	margin: 0 0 -3px 0;
+	display:inline-block;
+	background:url(./../images/checkbox.png) left top no-repeat;
+}
+.covering-box form input[type="checkbox"]:checked + label span{
+	background:url(./../images/checkbox-blue.png) left top no-repeat;
+}
+.covering-box form input[type="checkbox"]#acceptNewTeam + label span {
+	margin: 0 0 -3px 5px;
+}
+.covering-box form input[type="checkbox"]#acceptTerms + label span {
+	margin: 3px 0 0 0;
+}
+.covering-box form input[type="checkbox"]#acceptTerms + label span {
+	float: right;
+}
+.covering-box form input[type="submit"]{
+	margin-left: 15px;
+	padding: 0 15px;
+	font-weight: bold; 
+}
+.covering-box form input[type="submit"]:hover, .change-form-button:hover{
+	background: #1182f5;
+	color: #fff;
+}
+#forgotPasswordContainer.covering-box form input[type="submit"]{
+	margin-bottom: 15px;
+}
+.covering-box form #createTeamTooltip{
+	margin: 17px 0 0 -30px;
+    position: absolute;
+    color: #fff;
+}
+.covering-box form #forgotPassword{
+	margin-right: 3%;
+	float: right;
+	background: none;
+	border: none;
+	color: #333;
+	font-style: italic;
+}
+.covering-box form #forgotPassword:hover{
+	color: #E43F3F; 
+}
+.covering-box form label{
+	padding: 0;
+	font-style: italic;
+	font-weight: normal;
+	cursor: pointer;
+}
+.covering-box form input[type="checkbox"]{
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
+.change-form-button{
+	height: 50px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	background: #d8d8d8;
+	border: none;
+	font-weight: bold;
+}
+.register-wrapper form{
+	padding-bottom: 20px;
+}
+.register-wrapper form>div{
+	margin: 10px 0;
+}
+.register-wrapper form>div:nth-of-type(1){
+	margin-top: 20px;
+}
+.register-wrapper form div span{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	float: left;
+	background: #1182f5;
+}
+.register-wrapper form p{
+	margin-top: 10px;
+	font-weight: bold;
+}
+.register-wrapper form p input{
+	margin-top: 10px;
+	cursor: pointer;
+}
 .friends{
 	display: none;
 	background: #fff;
 	border-left: 1px solid #d8d8d8;
 	padding: 73px 0 0 0;
 }
+.friends-search-wrapper ul li.active{
+	background: #1182f5;
+}
+.friends-search-wrapper ul li:hover{
+	background: #1182f5;
+}
 .friends-search-img{
-	width: 30px;
 	height: 30px;
 	margin-top: 10px; 
 	background: #000;
@@ -131,21 +578,58 @@ body{
 .friends-search-img img{
 	width: 30px;
 }
-#userSearch{
+#friendSearch{
+	width: 100%;
+	padding: 1px 5px;
 	font-style: italic;
 	font-weight: lighter;
 }
-.friends-header{
-	font-size: 12px;
-	font-style: italic;
-	margin: 10px 0 0 0;
-	border-bottom: 1px solid #d8d8d8; 
-}
-.friends-list{
+.friends-wrapper{
 	height: 400px;
-	margin: 5px 0 0 0;
 	overflow-y: scroll;
 	background: #fff;
+}
+.friends-wrapper>div{
+	border: none;
+}
+.friends-header{
+	margin: 10px 0 0 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #d8d8d8;
+	font-size: 12px;
+	font-style: italic;
+	cursor: pointer;
+}
+.friends-wrapper a{
+	text-decoration: none;
+	color: #333;
+}
+.friends-wrapper a h4:after {
+	font-family: 'Glyphicons Halflings';
+	font-size: 14px;  
+	content: "\e114"; 
+	float: right;        
+	color: grey;  
+}
+.friends-wrapper a.collapsed h4:after {
+	content: "\e080";   
+}
+.friends-header:hover{
+	color: #E43F3F;
+}
+.friends-list{
+	padding: 0;
+	margin: 5px 0 10px 0;
+	background: #fff;
+}
+#teamsList.friends-list{
+	padding: 0;
+}
+#teamsList.friends-list li, #groupList.friends-list li{
+	list-style: none;
+}
+#teamsList.friends-list li img{
+	width: 25px;
 }
 .friends-list li{
 	font-size: 12px;
@@ -155,7 +639,14 @@ body{
 	list-style-image: url(./../images/list-bullet-black.png);
 	cursor: pointer;
 }
-.friends-list li:hover{
+#groupList.friends-list li{
+	padding-left: 5px;
+}
+#groupList.friends-list li a{
+	color: #333;
+	text-decoration: none;
+}
+.friends-list li:hover, #groupList.friends-list li:hover a{
 	background: #d8d8d8;
 	color: #fff;
 }
@@ -184,7 +675,7 @@ li.friends-active{
 .friends-list-buttons li img{
 	width: 15px;
 }
-.friends-list-buttons li img:hover{
+.friends-list-buttons li:hover img{
 	transform: translateY(-5px);
 }
 .chat-row{
@@ -198,11 +689,9 @@ li.friends-active{
 }
 .chat-right-buffer{
 	right: 0;
-
 }
 .chat-right-buffer-clear{
 	right: 20px;
-
 }
 .chat-window{
 	width: 300px;
@@ -221,16 +710,27 @@ li.friends-active{
 	padding: 0;
 	border-radius: 0;
 }
+.chat-top-bar a{
+	text-decoration: none;
+	color: #333;
+}
+.chat-top-bar a:hover{
+	color: #E43F3F;
+}
 .chat-top-bar h3{
 	font-size: 12px;
 	font-style: italic;
 	line-height: 1.5;
+}
+.chat-top-bar a:hover h3 span{
+	color: #333;
 }
 .chat-top-bar h3 img{
 	margin-top: -2px;
 	margin-right: 5px;
 }
 .chat-top-bar span{
+	margin-left: 5px;
 	color: #363636;
 	cursor: pointer;
 }
@@ -250,11 +750,18 @@ li.friends-active{
 	overflow-y: scroll;
 	list-style: none;
 }
+.chat-body ul li{
+	padding: 0;
+}
 .chat-body ul li .chat-message-wrapper{
 	margin-bottom: 5px;
 }
 .chat-body ul li div{
 	padding: 0;
+}
+.chat-body ul li.chat-statement{
+	margin: 15px 0;
+
 }
 .chat-body h6{
 	font-family: 'Open Sans', sans-serif;
@@ -278,10 +785,10 @@ li.friends-active{
 	color: #1182f5;
 }
 .chat-body img{
-	border: 2px solid #363636;
+	border: 3px solid #363636;
 }
 .chat-body .online-player img{
-	border: 2px solid #1182f5;
+	border: 3px solid #1182f5;
 }
 p.chat-panel-message{
 	margin: 0;
@@ -351,6 +858,225 @@ p.chat-panel-message{
 .chat-info ul li:hover{
 	background: #d8d8d8;
 }
+.dropup .dropdown-menu.chat-settings{
+	min-width: 130px;
+	margin: 0 0 0 -30px;
+	padding: 0;
+	border-radius: 0;
+	box-shadow: none;
+}
+.chat-settings li{
+	height: 30px;
+	text-align: center;
+}
+.chat-settings li:hover, .chat-settings li:hover a{
+	background: #e43f3f;
+}
+.chat-settings li a{
+	padding: 3px 0;
+	font-weight: bold;
+}
+.dropup .dropdown-menu.team-dropup{
+	width: 200px;
+	max-height: 132px;
+	margin: 0 0 0 -2px;
+	padding: 0;
+	border-radius: 0;
+	box-shadow: none;
+	overflow-y: auto; 
+}
+.team-dropup li a{
+	padding: 3px 5px;
+}
+.team-dropup li a span{
+	margin-top: 3px;
+	float: right;
+}
+.team-dropup li a span.crown{
+	width: 16px;
+	height: 16px;
+	background: url(./../images/crown.png) no-repeat;
+}
+.team-dropup li a:hover span{
+	color: #333;
+}
+.team-dropup li a:hover, .team-dropup li a span:hover{
+	color: #e43f3f;
+}
+.team-dropup li a img{
+	padding: 0 5px;
+}
+.groupmates{
+	top: 100px;
+	background: #fff;
+	border-top: 5px solid #e43f3f;
+	border-bottom: 3px solid #e43f3f;
+	color: #333;
+}
+.groupmates h2{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #d8d8d8;
+	font-size: 22px;
+	font-weight: bold; 
+}
+.groupmates ul{
+	max-height: 200px;
+	list-style: none;
+	margin: 0 0 0 -5px;
+	padding: 0 0 20px 0;
+	overflow-y: auto;
+}
+.groupmates ul li{
+	margin: 5px;
+	display: inline-block;
+}
+.groupmates .chosen-groupmate{
+	width: 120px;
+	height: 120px;
+	margin-top: -120px;
+	position: relative;
+	background: rgba(250, 250, 250, 0.5);
+	opacity: 0;
+}
+.groupmates .chosen-groupmate span{
+	margin: 40px 0 0 40px;
+	color: rgba(228, 63, 63, 1);
+	font-size: 40px;
+}
+.groupmates-box img{
+	width: 120px;
+	border: 3px solid #363636;
+}
+.groupmates-box p{
+	width: 120px;
+	margin-top: 3px;
+	padding: 2px 0;
+	background: #363636;
+	font-size: 12px;
+	font-style: italic;
+	color: #fff;
+}
+.groupmates-box:hover p, .groupmates ul li.chosen .groupmates-box p{
+	background: #E43F3F; 
+}
+.groupmates ul li a:hover div, .groupmates ul li.chosen a div{
+	opacity: 1;
+}
+.groupmates ul::-webkit-scrollbar,
+.dropdown-submenu>.dropdown-menu::-webkit-scrollbar,
+#alert .menu-box ul::-webkit-scrollbar{
+	width: 7px;
+}
+.groupmates ul::-webkit-scrollbar-track,
+.dropdown-submenu>.dropdown-menu::-webkit-scrollbar-track,
+#alert .menu-box ul::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	border-radius: 10px;
+}
+.groupmates ul::-webkit-scrollbar-thumb,
+.dropdown-submenu>.dropdown-menu::-webkit-scrollbar-thumb,
+#alert .menu-box ul::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background: #363636;
+}
+.groupmates input[type="text"]{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #d8d8d8;
+	font-size: 22px;
+}
+.groupmates input[type="submit"]{
+	margin: 20px auto;
+	padding: 1px 10px;
+	display: block;
+	background: #e43f3f;
+	border: none;
+	color: #fff;
+	font-size: 22px;
+	font-weight: bold;
+}
+.groupmates input[type="submit"]:hover{
+	background: #363636;
+}
+.create-team-wrapper{
+	top: 100px;
+}
+.create-team-wrapper form{
+	padding-bottom: 15px;
+}
+.games-slider{
+	overflow-x: scroll;
+}
+.games-slider ul{
+	list-style: none;
+	padding: 0;
+	white-space: nowrap;
+}
+.games-slider ul li{
+	display: inline-block;
+}
+.games-slider ul li a{
+	text-decoration: none;
+}
+.img-holder{
+	display:inline-block;
+	position: relative;
+}
+.covering-box form div.img-holder img{
+	width: 100%;
+	margin: 0;
+}
+.img-holder:after{
+	content:'';
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	background: #fff;
+	opacity: 0.7;
+}
+.games-slider ul li:hover .img-holder:after{
+	opacity: 0.5;
+}
+.menu-scroll.games-slider ul li:hover .img-holder:after{
+	opacity: 0.7;
+}
+.current-game .img-holder:after, #menuPlaystationSlider.menu-scroll.games-slider ul li:hover .img-holder:after{
+	background: #1182f5;
+}
+#menuXboxSlider.menu-scroll .current-game .img-holder:after, #menuXboxSlider.menu-scroll.games-slider ul li:hover .img-holder:after{
+	background: #27912b;
+}
+.games-slider ul li.current-game a h5, .menu-scroll.games-slider ul li:hover a h5{
+	color: #fff;
+} 
+.games-slider ul li a h5{
+	margin: 0; 
+	color: #333;
+	font-weight: bold;
+	position: relative;
+}
+.games-slider ul li a h5 span{
+	width: 164px;
+	margin-top: 20%;
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+}
+.games-slider::-webkit-scrollbar {
+	height: 7px;
+}
+.games-slider::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	border-radius: 10px;
+}
+.games-slider::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #363636;
+}
 .social{
 	height: 50px;
 	border-top: 3px solid #e43f3f;
@@ -378,7 +1104,9 @@ li.social-list img{
 .main{
 	background: #fff;
 	margin-top: 15px;
+	margin-bottom: 50px;
 	border-top: 3px solid #e43f3f;
+	border-bottom: 3px solid #e43f3f;
 	border-left: 1px solid #d8d8d8;
 	border-right: 1px solid #d8d8d8;
 }
@@ -416,15 +1144,25 @@ li.social-list img{
 	width: 100%;
 	margin: -5px 0 0 0;
 }
+#errorContainer { 
+    position: fixed; 
+}
 @media screen and (min-width: 480px){
 	.menu-box{
-		left: 45%;
+		left: 15%;
 	}
-	#target .menu-box{
-		position: relative;
-		left: 10%;
+	.coins-list ul li{
+		width: 20%;
 	}
-}
+	.coins-list ul li:nth-of-type(4){
+		padding-left: 1%;
+	}
+	.covering-box form #forgotPassword{
+		margin-right: 2%;
+	}
+	.covering-box form input[type="submit"]{
+		width: 33.33%; 
+	}
 @media screen and (min-width: 640px){
 	.social-list:nth-child(1){
 		margin-left: 40%;
@@ -435,43 +1173,107 @@ li.social-list img{
 	.social-list:nth-child(3){
 		margin-left: 50%;
 	}
-	#target .menu-box{
-		position: relative;
-		left: 20%;
+	.covering-box form #forgotPassword{
+	margin-right: 4%;
 	}
-}
+	.covering-box form input{
+		width: 90%;
+	}
+	.register-wrapper form p input{
+		width: 100%;
+	}
 @media screen and (min-width: 768px){
+	.xs-pull-right{
+		width: auto;
+		float: right;
+	}
+	.sm-pull-right{
+		float: right;
+	}
+	.tournament-container h2{
+		margin: 0;
+	}
+	.tournament-container ul li{
+		margin: 0 0 15px 0;
+	}
+	.tournament-container ul li div p{
+		margin: 0 15px;
+	}
 	.footer nav ul li:nth-child(1){
 		margin: 0;
 	}
-	#target #firstMenuBox{
-		margin-bottom: 0;
-		border-bottom: none;
+	.groupmates{
+		width: 650px;
 	}
-	#target .menu-box{
-		position: relative;
-		left: 0;
+	.groupmates ul{
+	max-height: 300px;
 	}
-}
+	#user>ul {
+		left: 25%;
+	}
 @media screen and (min-width: 990px){
+	.alert-box-wrapper{
+		top: 50px;
+	}
 	.nav-wrapper{
 		position: fixed;
 		width: 100%;
-		z-index: 1111;
+		z-index: 500;
 	}
 	.menu-box{
 		left: 0;
 	}
-	#target #firstMenuBox{
-		margin-left: 26%;
+	.background-cover{
+		position: fixed;
+	}
+	#registerContainer{
+		position: absolute;
 	}
 	.menu-background{	
 		width: 100%;
-		top: 53px;
+		top: 55px;
 		left: 0;
 		padding:0;
 		margin:0;
 		position: fixed;
+	}
+	.dropdown-submenu>.dropdown-menu {
+		top: 0;
+		left: -100%;
+		margin-left: -14px;
+		display: none;
+	}
+	.dropdown-submenu:hover>.dropdown-menu {
+		display: block;
+	}
+	.menu-box>.teams-menu{
+		height: inherit;
+	}
+	.menu-box>.teams-menu>a{
+		display: block;
+	}
+	#alert .menu-box{
+		width: 400px;
+		margin-left: 15px;
+	}
+	#alert .menu-box ul li{
+		margin: 0 0 5px 0;
+		padding: 10px 10px 10px 20px;
+		background: #e43f3f;
+		border-radius: 60px;
+	}
+	#alert .menu-box ul li p{
+		width: 280px;
+		display: inline-block;
+		color: #fff;
+		font-style: italic;
+	}
+	#user>ul {
+		left: 0;
+		margin-left: 25px;
+	}
+	.dropdown-submenu>.dropdown-menu {
+		margin-left: -1px;
 	}
 	.login{
 		height: 255px;
@@ -495,9 +1297,6 @@ li.social-list img{
 	.friends-row{
 		float: right;
 	}
-	.friends-list{
-		height: inherit;
-	}
 	#userSearch{
 		width: 100%;
 	}
@@ -519,7 +1318,9 @@ li.social-list img{
 	.chat-right-buffer{
 		right: 27%;
 	}
-	
+	.covering-box form #forgotPassword{
+		margin-right: 15%;
+	}
 }
 @media screen and (min-width: 1024px){
 	.social{
@@ -528,14 +1329,55 @@ li.social-list img{
 	li.social-list img{
 		margin: 8px 0 0 0;
 	}
+	.covering-box form #forgotPassword{
+	margin-right: 25px;
+	}
 }
 @media screen and (min-width: 1200px){
 	.chat-right-buffer{
 		right: 18%;
 	}
+	#user{
+		padding-left: 0;
+		padding-top: 15px;
+		text-align: left;
+	}
+	#user div{
+		cursor: pointer;
+	}
+	#user div div{
+		margin-top: -15px;
+		float: left;
+	}
+	#user>ul {
+		margin-left: 0;
+	}
+	#coins, #alert{
+		width: 5%;
+		padding: 0;
+	}
+	#alert .menu-box{
+		margin: 0;
+	}
+	.covering-box form input[type="checkbox"]#acceptTerms + label span {
+		margin-right: 30px;
+	}
 }
 @media screen and (min-width: 1280px){
 	.login-text{
 		margin: 135px 0 0 45px;
+	}
+}
+@media screen and (min-height: 910px){
+	#registerContainer{
+		position: fixed;
+	}
+}
+@-moz-document url-prefix() {
+	.team-dropup li a span{
+		margin-top: -17px;
+	}
+	.team-dropup li a span.crown{
+		margin-top: -19px;
 	}
 }

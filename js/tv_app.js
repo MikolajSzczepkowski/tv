@@ -48,4 +48,22 @@ $(function (){
 			$(this).removeClass("liked");
 		}
 	});
+
+	$(document).on("submit", "#streamRequestForm", function(e){
+		e.preventDefault();
+		
+			if ($(this).find("textarea").val().length == 0) {
+				$("#alertBox p").text("You have to write a request");
+				$("#alertBox").show();
+				$("#alertBox").delay(3000).hide(0);
+			}
+			if ($("#twitchUrlRequest").val().length == 0 &&
+				$("#youtubeUrlRequest").val().length == 0 &&
+				$("#hitboxUrlRequest").val().length == 0){
+
+				$("#alertBox p").text("You have to insert URL address");
+				$("#alertBox").show();
+				$("#alertBox").delay(3000).hide(0);
+			}
+	});
 });
